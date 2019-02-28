@@ -54,7 +54,13 @@ This is the default seed phrase used by [Truffle](https://github.com/trufflesuit
 - You should see your first test account now has 100 ETH and the address `0x627306090abaB3A6e1400e9345bC60c78a8BEf57`. Additional generated accounts will also have this amount.
 
 ### Troubleshooting
- - If IPFS fails to start with error "UnhandledPromiseRejectionWarning: Error: Lock file is already being hold", clean up the IPFS local data:
+- Clean install of all modules
+	- `cd` to root dir of repo
+	- `lerna clean` (if needed, install lerna with `npm install -f lerna`)
+	- `rm -rf node_modules`
+	- `rm package-lock.json` (if it exists)
+	- `npm install`
+- If IPFS fails to start with error "UnhandledPromiseRejectionWarning: Error: Lock file is already being hold", clean up the IPFS local data:
 ```rm -rf ~/.jsipfs/```
 
 ## Using Docker Compose
